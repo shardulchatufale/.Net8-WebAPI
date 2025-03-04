@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|c:\\users\\shardulc\\desktop\\new folder (3)\\dotnet8webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|c:\\users\\shardulc\\desktop\\new folder (3)\\dotnet8webapi\\controllers\\ourherocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|solutionrelative:controllers\\ourherocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|c:\\users\\shardulc\\desktop\\new folder (3)\\dotnet8webapi\\services\\ourheroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|solutionrelative:services\\ourheroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|c:\\users\\shardulc\\desktop\\new folder (3)\\dotnet8webapi\\services\\iourheroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|solutionrelative:services\\iourheroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|c:\\users\\shardulc\\desktop\\new folder (3)\\dotnet8webapi\\model\\ourhero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|solutionrelative:model\\ourhero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|c:\\users\\shardulc\\desktop\\new folder (3)\\dotnet8webapi\\model\\addupdateourhero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|solutionrelative:model\\addupdateourhero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|c:\\users\\shardulc\\desktop\\new folder (3)\\dotnet8webapi\\dotnet8webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1942DB20-A652-426B-8173-0AD35D433468}|DotNet8WebAPI.csproj|solutionrelative:dotnet8webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T05:39:36.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOurHeroService.cs",
+              "DocumentMoniker": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Services\\IOurHeroService.cs",
+              "RelativeDocumentMoniker": "Services\\IOurHeroService.cs",
+              "ToolTip": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Services\\IOurHeroService.cs",
+              "RelativeToolTip": "Services\\IOurHeroService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAASwA4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T04:45:33.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OurHeroService.cs",
+              "DocumentMoniker": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Services\\OurHeroService.cs",
+              "RelativeDocumentMoniker": "Services\\OurHeroService.cs",
+              "ToolTip": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Services\\OurHeroService.cs",
+              "RelativeToolTip": "Services\\OurHeroService.cs",
+              "ViewState": "AgIAABUAAAAAmZmZmZklwD0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T04:44:49.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OurHeroController.cs",
+              "DocumentMoniker": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Controllers\\OurHeroController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OurHeroController.cs",
+              "ToolTip": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Controllers\\OurHeroController.cs",
+              "RelativeToolTip": "Controllers\\OurHeroController.cs",
+              "ViewState": "AgIAAAMAAACAMDMzMzMrwDkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T19:52:42.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddUpdateOurHero.cs",
+              "DocumentMoniker": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Model\\AddUpdateOurHero.cs",
+              "RelativeDocumentMoniker": "Model\\AddUpdateOurHero.cs",
+              "ToolTip": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Model\\AddUpdateOurHero.cs",
+              "RelativeToolTip": "Model\\AddUpdateOurHero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T04:42:44.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OurHero.cs",
+              "DocumentMoniker": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Model\\OurHero.cs",
+              "RelativeDocumentMoniker": "Model\\OurHero.cs",
+              "ToolTip": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\Model\\OurHero.cs",
+              "RelativeToolTip": "Model\\OurHero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T04:37:20.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DotNet8WebAPI",
+              "DocumentMoniker": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\DotNet8WebAPI.csproj",
+              "RelativeDocumentMoniker": "DotNet8WebAPI.csproj",
+              "ToolTip": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\DotNet8WebAPI.csproj",
+              "RelativeToolTip": "DotNet8WebAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-03T19:53:07.79Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

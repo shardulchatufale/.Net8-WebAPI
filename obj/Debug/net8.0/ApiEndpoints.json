@@ -1,0 +1,87 @@
+[
+  {
+    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "Method": "Get",
+    "RelativePath": "api/OurHero",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "isActive",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "Method": "Post",
+    "RelativePath": "api/OurHero",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "heroObject",
+        "Type": "DotNet8WebAPI.Model.AddUpdateOurHero",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "Method": "Get",
+    "RelativePath": "api/OurHero/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "Method": "Put",
+    "RelativePath": "api/OurHero/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "heroObject",
+        "Type": "DotNet8WebAPI.Model.AddUpdateOurHero",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "Method": "Delete",
+    "RelativePath": "api/OurHero/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
