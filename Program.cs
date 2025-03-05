@@ -1,14 +1,20 @@
+﻿using DotNet8WebAPI.Entity;
 using DotNet8WebAPI.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-//*********************** Add services to the container.***********************
-builder.Services.AddSingleton<IOurHeroService, OurHeroService>();// hewre if we use addscoped why it is not bev
-//*********************** Add services to the container end.***********************
+// *********************** Add services to the container ***********************
+
+builder.Services.AddDbContext<OurHeroDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("OurHeroConnectionString")));
+
+// ✅ Register the service
+builder.Services.AddScoped<IOurHeroService, OurHeroService>();
+
+// *********************** Add services to the container end ***********************
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -22,9 +28,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

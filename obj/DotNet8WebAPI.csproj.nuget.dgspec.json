@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\DotNet8WebAPI.csproj": {}
+    "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\.Net8-WebAPI\\DotNet8WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\DotNet8WebAPI.csproj": {
+    "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\.Net8-WebAPI\\DotNet8WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\DotNet8WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\.Net8-WebAPI\\DotNet8WebAPI.csproj",
         "projectName": "DotNet8WebAPI",
-        "projectPath": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\DotNet8WebAPI.csproj",
+        "projectPath": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\.Net8-WebAPI\\DotNet8WebAPI.csproj",
         "packagesPath": "C:\\Users\\ShardulC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\DotNet8WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\ShardulC\\Desktop\\New folder (3)\\.Net8-WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"

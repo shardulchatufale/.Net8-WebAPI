@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "ContainingType": "DotNet8WebAPI.Controllers.OurHeroController",
     "Method": "Get",
     "RelativePath": "api/OurHero",
     "HttpMethod": "GET",
@@ -16,7 +16,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "ContainingType": "DotNet8WebAPI.Controllers.OurHeroController",
     "Method": "Post",
     "RelativePath": "api/OurHero",
     "HttpMethod": "POST",
@@ -32,7 +32,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "ContainingType": "DotNet8WebAPI.Controllers.OurHeroController",
     "Method": "Get",
     "RelativePath": "api/OurHero/{id}",
     "HttpMethod": "GET",
@@ -48,7 +48,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "ContainingType": "DotNet8WebAPI.Controllers.OurHeroController",
     "Method": "Put",
     "RelativePath": "api/OurHero/{id}",
     "HttpMethod": "PUT",
@@ -69,7 +69,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "DotNet8API.Controllers.OurHeroController",
+    "ContainingType": "DotNet8WebAPI.Controllers.OurHeroController",
     "Method": "Delete",
     "RelativePath": "api/OurHero/{id}",
     "HttpMethod": "DELETE",
