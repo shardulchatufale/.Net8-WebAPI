@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotNet8WebAPI.Migrations
 {
     [DbContext(typeof(OurHeroDbContext))]
-    [Migration("20250305071832_mm1")]
-    partial class mm1
+    [Migration("20250307052349_mm")]
+    partial class mm
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

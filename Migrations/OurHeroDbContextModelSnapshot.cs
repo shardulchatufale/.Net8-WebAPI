@@ -53,6 +53,49 @@ namespace DotNet8WebAPI.Migrations
                             isActive = true
                         });
                 });
+
+            modelBuilder.Entity("DotNet8WebAPI.Model.User", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            FirstName = "System",
+                            LastName = "",
+                            Password = "System",
+                            UserName = "System",
+                            isActive = false
+                        });
+                });
 #pragma warning restore 612, 618
         }
     }

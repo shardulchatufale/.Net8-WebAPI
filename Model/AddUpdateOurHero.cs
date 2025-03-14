@@ -8,3 +8,4 @@ namespace DotNet8WebAPI.Model
         public bool isActive { get; set; } = true;
     }
 }
+

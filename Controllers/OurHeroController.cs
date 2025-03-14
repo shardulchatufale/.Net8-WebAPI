@@ -88,6 +88,7 @@ namespace DotNet8API.Controllers
 */
 // OurHeroController.cs
 // OurHeroController.cs
+using DotNet8WebAPI.Helper;
 using DotNet8WebAPI.Model;
 using DotNet8WebAPI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -96,6 +97,7 @@ namespace DotNet8WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class OurHeroController : ControllerBase
     {
         private readonly IOurHeroService _heroService;

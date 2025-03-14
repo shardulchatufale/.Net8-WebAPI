@@ -30,5 +30,7 @@ namespace DotNet8WebAPI.Services
         Task<OurHero?> AddOurHero(AddUpdateOurHero obj);
         Task<OurHero?> UpdateOurHero(int id, AddUpdateOurHero obj);
         Task<bool> DeleteHerosByID(int id);
+
+
     }
 }

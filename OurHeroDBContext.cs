@@ -13,14 +13,14 @@ namespace DotNet8WebAPI.Entity
         }
  
         public DbSet<OurHero> OurHeros { get; set; }
+        public DbSet<User> Users { get; set; }
 
-     
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-        
+
             modelBuilder.Entity<OurHero>().HasKey(x => x.Id);
 
-            
+
             modelBuilder.Entity<OurHero>().HasData(
                 new OurHero
                 {
@@ -30,6 +30,18 @@ namespace DotNet8WebAPI.Entity
                     isActive = true,
                 }
             );
+            modelBuilder.Entity<User>().HasData(
+                new User
+                {
+                    Id = 1,
+                    FirstName="System",
+                    LastName="",
+                    UserName="System",
+                    Password="System",
+                }
+                );
+
+
         }
     }
 }
