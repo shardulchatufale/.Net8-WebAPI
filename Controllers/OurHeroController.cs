@@ -115,7 +115,7 @@ namespace DotNet8WebAPI.Controllers
 
         [HttpGet("{id}")]
         //[Route("{id}")] // /api/OurHero/:id
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> Get( int id)
         {
             var hero = await _heroService.GetHerosByID(id);
             if (hero == null)

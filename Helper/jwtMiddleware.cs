@@ -16,44 +16,43 @@ namespace DotNet8WebAPI.Helper
         {
             _next = next;
             _appSetting = appsetting.Value;
-
         }
 
         public async Task Invoke(HttpContext context, IUserService userService)
         {
-            var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+            var authHeader = context.Request.Headers["Authorization"].FirstOrDefault();
+            var token = authHeader?.StartsWith("Bearer ") == true ? authHeader.Split(" ").Last() : null;
 
             if (token != null)
             {
                 await attachUserToContext(context, userService, token);
-
             }
 
             await _next(context);
         }
 
-        private async Task attachUserToContext(HttpContext context,IUserService userService ,string token)
+        private async Task attachUserToContext(HttpContext context, IUserService userService, string token)
         {
             try
             {
                 var tokenHandler = new JwtSecurityTokenHandler();
-                var key=Encoding.ASCII.GetBytes(_appSetting.Secret);
-                tokenHandler.ValidateToken(token, new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                var key = Encoding.ASCII.GetBytes(_appSetting.Secret);
+                tokenHandler.ValidateToken(token, new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
+                    ValidateAudience = false,
                     ClockSkew = TimeSpan.Zero
                 }, out SecurityToken validatedToken);
 
-                var jwtToken=(JwtSecurityToken)validatedToken;
-                var UserId = int.Parse(jwtToken.Claims.First(x => x.Type == "id").Value);
+                var jwtToken = (JwtSecurityToken)validatedToken;
+                var UserId = int.Parse(jwtToken.Claims.First(x => x.Type == "sub").Value);
                 context.Items["User"] = await userService.GetByID(UserId);
-
             }
             catch
             {
-
+                // Log error if needed
             }
         }
     }

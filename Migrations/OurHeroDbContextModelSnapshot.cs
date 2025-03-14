@@ -56,11 +56,11 @@ namespace DotNet8WebAPI.Migrations
 
             modelBuilder.Entity("DotNet8WebAPI.Model.User", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -81,14 +81,14 @@ namespace DotNet8WebAPI.Migrations
                     b.Property<bool>("isActive")
                         .HasColumnType("bit");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             FirstName = "System",
                             LastName = "",
                             Password = "System",

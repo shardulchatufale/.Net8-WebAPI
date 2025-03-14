@@ -14,7 +14,6 @@ namespace DotNet8WebAPI.Services
         private readonly AppSetting _appSettings;
         private readonly OurHeroDbContext db;
 
-
         public UserService(IOptions<AppSetting> appSettings, OurHeroDbContext _db)
         {
             _appSettings = appSettings.Value;
@@ -32,25 +31,24 @@ namespace DotNet8WebAPI.Services
                 {
                     foundObj.FirstName = userObj.FirstName;
                     foundObj.LastName = userObj.LastName;
-                    db.Users.Update(foundObj); // Correctly updates the object
+                    db.Users.Update(foundObj);
                     isSuccess = await db.SaveChangesAsync() > 0;
-                    return isSuccess ? foundObj : null; // Return the updated object
+                    return isSuccess ? foundObj : null;
                 }
             }
             else
             {
-                await db.Users.AddAsync(userObj); // Add new user if Id is zero
+                await db.Users.AddAsync(userObj);
                 isSuccess = await db.SaveChangesAsync() > 0;
             }
 
             return isSuccess ? userObj : null;
         }
 
-
         public async Task<AuthenticateResponse?> Authenticate(AuthenticationRequest model)
         {
             var FoundUser = await db.Users.SingleOrDefaultAsync(x => x.UserName == model.Username && x.Password == model.Password);
-            if (FoundUser == null)  return null; 
+            if (FoundUser == null) return null;
 
             var token = await GenerateJwtToken(FoundUser);
             return new AuthenticateResponse(FoundUser, token);
@@ -74,7 +72,7 @@ namespace DotNet8WebAPI.Services
                 var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
-                    Subject = new ClaimsIdentity(new[] { new Claim("id", user.Id.ToString()) }), // Fixed syntax here
+                    Subject = new ClaimsIdentity(new[] { new Claim("sub", user.Id.ToString()) }),
                     Expires = DateTime.UtcNow.AddDays(7),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
                 };
@@ -82,6 +80,5 @@ namespace DotNet8WebAPI.Services
             });
             return tokenHandler.WriteToken(token);
         }
-
     }
 }

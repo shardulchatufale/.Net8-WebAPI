@@ -7,31 +7,24 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// *********************** Add services to the container ***********************
-
-builder.Services.Configure<AppSetting>(builder.Configuration.GetSection("AppSettings")); 
+builder.Services.Configure<AppSetting>(builder.Configuration.GetSection("AppSettings"));
 
 builder.Services.AddDbContext<OurHeroDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("OurHeroConnectionString")));
 
-// ✅ Register the service
 builder.Services.AddScoped<IOurHeroService, OurHeroService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { 
-        Title = "Project Structure",
-        Version = "v1" 
-    });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Project Structure", Version = "v1" });
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer",
-        BearerFormat="JWT"
-
+        BearerFormat = "JWT"
     });
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
@@ -49,24 +42,18 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-// *********************** Add services to the container end ***********************
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-app.UseMiddleware<jwtMiddleware>(); 
+app.UseMiddleware<jwtMiddleware>();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
-
