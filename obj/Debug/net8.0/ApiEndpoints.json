@@ -112,6 +112,22 @@
   },
   {
     "ContainingType": "DotNet8WebAPI.Controllers.UserController",
+    "Method": "GetById",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DotNet8WebAPI.Controllers.UserController",
     "Method": "Put",
     "RelativePath": "api/User/{id}",
     "HttpMethod": "PUT",
@@ -140,7 +156,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Model",
+        "Name": "model",
         "Type": "DotNet8WebAPI.Model.AuthenticationRequest",
         "IsRequired": true
       }

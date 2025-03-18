@@ -11,12 +11,12 @@ namespace DotNet8WebAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private IUserService _userService;
+        private readonly IUserService _userService;
+
         public UserController(IUserService userService)
         {
             _userService = userService;
         }
-
 
         [HttpGet]
         [Authorize]
@@ -25,12 +25,30 @@ namespace DotNet8WebAPI.Controllers
             return Ok(await _userService.GetALL());
         }
 
+        [HttpGet("{id}")]
+        [Authorize] 
+        public async Task<IActionResult> GetById(int id)
+        {
+            var user = await _userService.GetByID(id);
+
+            if (user == null)
+            {
+                return NotFound(new { Message = $"User with ID {id} not found." });
+            }
+
+            return Ok(user);
+        }
+
         [HttpPost]
-        
         public async Task<IActionResult> Post([FromBody] User userObj)
         {
             userObj.Id = 0;
-            return Ok(await _userService.AddAndUpdateUser(userObj));
+            var result = await _userService.AddAndUpdateUser(userObj);
+            if (result == null)
+            {
+                return BadRequest(new { Message = "Failed to create the user." });
+            }
+            return Ok(result);
         }
 
         [HttpPut("{id}")]
@@ -38,14 +56,22 @@ namespace DotNet8WebAPI.Controllers
         public async Task<IActionResult> Put(int id, [FromBody] User userObj)
         {
             userObj.Id = id;
-            return Ok(await _userService.AddAndUpdateUser(userObj));
+            var result = await _userService.AddAndUpdateUser(userObj);
+            if (result == null)
+            {
+                return NotFound(new { Message = $"User with ID {id} not found." });
+            }
+            return Ok(result);
         }
 
         [HttpPost("Login")]
-        public async Task <IActionResult>Login(AuthenticationRequest Model)
+        public async Task<IActionResult> Login(AuthenticationRequest model)
         {
-            var response = await _userService.Authenticate(Model);
-            if (response == null) { return BadRequest(new { Message = "Username or Password is incorrect" }); }
+            var response = await _userService.Authenticate(model);
+            if (response == null)
+            {
+                return BadRequest(new { Message = "Username or Password is incorrect." });
+            }
             return Ok(response);
         }
     }

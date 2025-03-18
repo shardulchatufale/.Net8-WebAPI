@@ -22,8 +22,6 @@ namespace DotNet8WebAPI.Services
 
         public async Task<User?> AddAndUpdateUser(User userObj)
         {
-            bool isSuccess = false;
-
             if (userObj.Id > 0)
             {
                 var foundObj = await db.Users.FirstOrDefaultAsync(x => x.Id == userObj.Id);
@@ -32,17 +30,18 @@ namespace DotNet8WebAPI.Services
                     foundObj.FirstName = userObj.FirstName;
                     foundObj.LastName = userObj.LastName;
                     db.Users.Update(foundObj);
-                    isSuccess = await db.SaveChangesAsync() > 0;
-                    return isSuccess ? foundObj : null;
+                    await db.SaveChangesAsync();
+                    return foundObj;
                 }
             }
             else
             {
                 await db.Users.AddAsync(userObj);
-                isSuccess = await db.SaveChangesAsync() > 0;
+                await db.SaveChangesAsync();
+                return userObj;
             }
 
-            return isSuccess ? userObj : null;
+            return null;
         }
 
         public async Task<AuthenticateResponse?> Authenticate(AuthenticationRequest model)
@@ -59,7 +58,7 @@ namespace DotNet8WebAPI.Services
             return await db.Users.Where(x => x.isActive == true).ToListAsync();
         }
 
-        public async Task<User> GetByID(int id)
+        public async Task<User?> GetByID(int id)
         {
             return await db.Users.FirstOrDefaultAsync(x => x.Id == id);
         }
